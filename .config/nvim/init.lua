@@ -20,12 +20,11 @@ opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'
 opt.syntax = "ON"
 opt.termguicolors = true
-vim.api.nvim_command('colorscheme dracula')
+vim.api.nvim_command('colorscheme Tomorrow-Night')
 
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
-opt.hlsearch = false
 
 opt.expandtab = true
 opt.shiftwidth = 2
@@ -40,11 +39,14 @@ opt.splitbelow = true
 local map = vim.api.nvim_set_keymap
 
 local key = '<space>'
-map('i', key .. 'jk', '<escape>', {})
+map('i', 'jk', '<escape>', {})
 map('n', key .. 'n', [[:NvimTreeToggle<cr>]], {})
 map('n', key .. 'f', [[:Telescope find_files<cr>]], {})
 map('n', key .. 'g', [[:Git<cr>]], {})
 map('n', key .. 'to', [[:TermOpen<cr><cr>]], {})
+map('n', key .. 'c', [[:noh<cr>]], {})
+
+map('t', '<escape>', '<C-\\><C-n>', {})
 
 -- Move panes
 map('n', '<C-h>', '<C-w>h', {})
