@@ -29,13 +29,13 @@ colors:
 
 font:
   normal:
-    family: "Less Perfect DOS VGA"
+    family: "Maple Mono NF"
     style: Regular
   bold:
-    family: "Less Perfect DOS VGA"
+    family: "Maple Mono NF"
     style: Bold
   italic:
-    family: "Less Perfect DOS VGA"
+    family: "Maple Mono NF"
     style: "Italic"
   size: 12.0
 
