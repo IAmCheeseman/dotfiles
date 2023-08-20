@@ -20,7 +20,7 @@ opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'
 opt.syntax = "ON"
 opt.termguicolors = true
-vim.api.nvim_command('colorscheme Tomorrow-Night')
+vim.api.nvim_command('colorscheme monokai-pro')
 
 opt.ignorecase = true
 opt.smartcase = true
@@ -48,7 +48,7 @@ map('n', key .. 'c', [[:noh<cr>]], {})
 
 map('t', '<escape>', '<C-\\><C-n>', {})
 
--- Move panes
+-- Move pane
 map('n', '<C-h>', '<C-w>h', {})
 map('n', '<C-j>', '<C-w>j', {})
 map('n', '<C-k>', '<C-w>k', {})
