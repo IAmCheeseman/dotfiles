@@ -7,7 +7,6 @@ require("plugin_conf")
 require("lsp")
 
 -- OPTIONS
-
 local opt = vim.opt
 
 opt.number = true
@@ -46,11 +45,18 @@ map('n', key .. 'g', [[:Git<cr>]], {})
 map('n', key .. 'to', [[:TermOpen<cr><cr>]], {})
 map('n', key .. 'c', [[:noh<cr>]], {})
 
-map('t', '<escape>', '<C-\\><C-n>', {})
-
--- Move pane
+-- change pane
 map('n', '<C-h>', '<C-w>h', {})
 map('n', '<C-j>', '<C-w>j', {})
 map('n', '<C-k>', '<C-w>k', {})
 map('n', '<C-l>', '<C-w>l', {})
+
+map('o', 'as', 'a"', {})
+map('o', 'is', 'i"', {})
+map('o', 'it', 'i[', {})
+map('o', 'at', 'a[', {})
+
+map('t', '<escape>', '<C-\\><C-n>', {})
+map('t', 'jk', '<C-\\><C-n>', {})
+
 
