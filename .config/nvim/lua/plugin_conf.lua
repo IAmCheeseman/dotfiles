@@ -60,3 +60,4 @@ require('terminal').setup{
   autoclose = false,
 }
 
+require('Comment').setup {}

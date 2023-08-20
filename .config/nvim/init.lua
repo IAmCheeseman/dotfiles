@@ -20,7 +20,7 @@ opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'
 opt.syntax = "ON"
 opt.termguicolors = true
-vim.api.nvim_command('colorscheme monokai-pro')
+vim.api.nvim_command('colorscheme monokai-pro-spectrum')
 
 opt.ignorecase = true
 opt.smartcase = true
