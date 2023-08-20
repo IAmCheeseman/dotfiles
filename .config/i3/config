@@ -32,9 +32,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+exec xrandr --output DVI-D-0 --auto --right-of HDMI-A-0
 exec setxkbmap -option "caps:super"
 exec nitrogen --restore
 exec alacritty --hold -e sudo pacman -Syu
+exec unclutter --timeout 2
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -48,10 +50,10 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous && $refresh_i3stat
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up j
-set $down k
-set $left l
-set $right semicolon
+set $up k
+set $down j
+set $left h
+set $right l
 set $mod Mod4
 
 # use Mouse+$mod to drag floating windows to their wanted position
@@ -102,7 +104,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v

@@ -1,5 +1,10 @@
 local lsp = require('lspconfig')
-lsp.lua_ls.setup {
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities(
+  vim.lsp.protocol.make_client_capabilities())
+
+lsp.lua_ls.setup({
+  capabilities=capabilities,
   Lua = {
     runtime = {
       version = "LuaJIT",
@@ -8,6 +13,17 @@ lsp.lua_ls.setup {
       enable = false,
     }
   }
+})
+
+
+lsp.clangd.setup {
+  capabilities=capabilities,
 }
 
-lsp.clangd.setup {}
+lsp.rust_analyzer.setup({
+  capabilities=capabilities,
+  settings = {
+    ['rust-analyzer'] = {},
+  },
+})
+
