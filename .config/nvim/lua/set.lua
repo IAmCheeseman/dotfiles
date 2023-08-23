@@ -13,15 +13,14 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
 
+local tabwidth = 2
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
-vim.opt.tabstop = 2
+vim.opt.shiftwidth = tabwidth
+vim.opt.softtabstop = tabwidth
+vim.opt.tabstop = tabwidth
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.cc = "80"
 
 vim.opt.mouse = ""
-
-vim.api.nvim_command("colorscheme monokai-pro-spectrum")
