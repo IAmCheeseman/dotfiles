@@ -6,7 +6,7 @@ cp -r ~/.config/alacritty ./.config/
 
 # Neovim
 cp -r ~/.config/nvim ./.config/
-rm -rf ./.config/nvim/site/
+rm -rf ./.config/nvim/plugin/
 
 # i3
 
