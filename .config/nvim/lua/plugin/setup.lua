@@ -1,6 +1,5 @@
 -- require("nvim-tree").setup {}
 require("Comment").setup {}
-require("zen-mode").setup {}
 
 require("plugin.treesitter")
 require("plugin.presence")

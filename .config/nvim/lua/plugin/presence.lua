@@ -1,6 +1,6 @@
-require("presence").setup{
+require("presence").setup {
     auto_update         = true,
-    neovim_image_text   = "The One True Text Editor",
+    neovim_image_text   = "Neovim",
     main_image          = "neovim",
     log_level           = nil,
     debounce_timeout    = 10,

@@ -10,9 +10,9 @@ if #album ~= 0 then
 end
 
 if status == "Playing" then
-    print((" Playing | %s by %s %s"):format(song, artist, album))
+    print((" 󰐊 Playing | %s by %s %s"):format(song, artist, album))
 elseif status == "Paused" then
-    print((" Paused  | %s by %s %s"):format(song, artist, album))
+    print(("  Paused  | %s by %s %s"):format(song, artist, album))
 else
-    print((" Stopped "):format(status))
+    print(("  Stopped "):format(status))
 end

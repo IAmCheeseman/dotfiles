@@ -1,7 +1,6 @@
 return require("packer").startup(function(use)
   use 'wbthomason/packer.nvim'
-
-  use { "ThePrimeagen/vim-be-good" }
+  use 'christoomey/vim-tmux-navigator'
 
   use {
      "kyazdani42/nvim-tree.lua",
@@ -17,6 +16,12 @@ return require("packer").startup(function(use)
   use { "Yggdroot/indentLine" }
   use { "windwp/nvim-autopairs" }
   use { "airblade/vim-gitgutter" }
+  use {
+    "folke/trouble.nvim",
+    requires = {
+      { "nvim-tree/nvim-web-devicons" },
+    }
+  }
 
   use { "weedatom/presence.nvim" }
   use { "mhinz/vim-startify" }
@@ -26,7 +31,7 @@ return require("packer").startup(function(use)
     requires = { "kyazdani42/nvim-web-devicons", opt = true }
   }
   use { "numToStr/Comment.nvim" }
-  use { "folke/zen-mode.nvim" }
+  use { "HiPhish/nvim-ts-rainbow2" }
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -53,12 +58,8 @@ return require("packer").startup(function(use)
   use {
     "loctvl842/monokai-pro.nvim",
     config = function()
-      vim.cmd("colorscheme monokai-pro")
+      vim.cmd("colorscheme monokai-pro-spectrum")
     end
-  }
-  use {
-    "catppuccin/nvim",
-    as = "catppuccin",
   }
 
   use {
