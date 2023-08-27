@@ -24,5 +24,3 @@ vim.opt.splitbelow = true
 vim.opt.cc = "80"
 
 vim.opt.mouse = ""
-
-vim.cmd("highlight Normal guibg=none")

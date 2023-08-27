@@ -23,6 +23,7 @@ return require("packer").startup(function(use)
     }
   }
 
+  use { "tpope/vim-fugitive" }
   use { "weedatom/presence.nvim" }
   use { "mhinz/vim-startify" }
   use { "DanilaMihailov/beacon.nvim" }
