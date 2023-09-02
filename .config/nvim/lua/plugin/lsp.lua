@@ -8,6 +8,7 @@ lsp.ensure_installed {
   "clangd",
   "cmake",
   "rust_analyzer",
+  "omnisharp"
 }
 
 lspconfig.gdscript.setup {}
