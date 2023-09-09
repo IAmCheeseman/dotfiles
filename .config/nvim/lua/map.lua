@@ -1,9 +1,8 @@
 vim.keymap.set("i", "jk", "<escape>", {})
--- vim.keymap.set("n", "<leader>n", [[:NvimTreeToggle<cr>]], {})
-vim.keymap.set("n", "<leader>n", [[:Ex<cr>]], {})
-vim.keymap.set("n", "<leader>g", [[:Git<cr>]], {})
-vim.keymap.set("n", "<leader>c", [[:noh<cr>]], {})
-vim.keymap.set("n", "<leader>e", [[:TroubleToggle<cr>]])
+vim.keymap.set("n", "<leader>n", [[:NvimTreeToggle<CR>]], {})
+vim.keymap.set("n", "<leader>g", [[:Git<CR>]], {})
+vim.keymap.set("n", "<leader>c", [[:noh<CR>]], {})
+vim.keymap.set("n", "<leader>e", [[:TroubleToggle<CR>]])
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", {})
 vim.keymap.set("n", "<C-j>", "<C-w>j", {})
@@ -25,3 +24,6 @@ vim.keymap.set("o", "ac", "a<", {})
 
 vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y", {})
 vim.keymap.set({ "n", "v" }, "<leader>v", "\"_", {})
+
+vim.keymap.set("n", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("n", "<down>", "<nop>", { noremap = true })

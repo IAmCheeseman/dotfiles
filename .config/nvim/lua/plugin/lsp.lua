@@ -13,6 +13,15 @@ lsp.ensure_installed {
 
 lspconfig.gdscript.setup {}
 
+lspconfig.omnisharp.setup {
+  cmd = {
+    "/usr/bin/omnisharp",
+    "--languageserver",
+    "--hostPID",
+    tostring(vim.fn.getpid())
+  }
+}
+
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings {
@@ -27,19 +36,17 @@ lsp.setup_nvim_cmp {
 }
 
 lsp.set_preferences {
-  suggest_lsp_servers = false,
-  sign_icons = {
-    error = "E",
-    warn  = "W",
-    hint  = "H",
-    info  = "I",
-  }
 }
 
 lsp.on_attach(function(_, buffer)
   local opts = { buffer=buffer, remap=false }
 
   vim.keymap.set("n", "<leader>ld", function() vim.lsp.buf.definition() end, opts)
+  vim.keymap.set("n", "<leader>h", function() vim.lsp.buf.hover() end, opts)
+  vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, opts)
+  vim.keymap.set("n", "<leader>lrf", function() vim.lsp.buf.references() end, opts)
+  vim.keymap.set("n", "<leader>lrn", function() vim.lsp.buf.rename() end, opts)
+  vim.keymap.set("n", "<leader>ls", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
 lsp.setup()
