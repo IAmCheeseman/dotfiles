@@ -75,6 +75,7 @@ return require("packer").startup(function(use)
       {"rafamadriz/friendly-snippets"},
     }
   }
+  use "tikhomirov/vim-glsl"
 
   use { "kosayoda/nvim-lightbulb" }
 
