@@ -14,3 +14,7 @@ cp -r ~/.config/i3 ./.config
 # tmux
 cp -r ~/.config/tmux ./.config/
 rm -rf ./.config/tmux/plugins/
+
+# polybar
+
+cp -r ~/.config/polybar ./.config/
