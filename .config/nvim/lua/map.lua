@@ -12,8 +12,10 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", {})
 vim.keymap.set("n", "<C-u>", "u", {})
 vim.keymap.set("n", "u", "", {})
 
-vim.keymap.set("n", "<leader>b", "^", {})
-vim.keymap.set("n", "<leader>w", "$", {})
+vim.keymap.set({ "n", "v" }, "<leader>b", "^", {})
+vim.keymap.set({ "n", "v" }, "<leader>w", "$", {})
+vim.keymap.set({ "n", "v" }, "^", "", {})
+vim.keymap.set({ "n", "v" }, "$", "", {})
 
 vim.keymap.set({ "v", "n" }, ".", "<C-u>zz", {})
 vim.keymap.set({ "v", "n" }, ",", "<C-d>zz", {})

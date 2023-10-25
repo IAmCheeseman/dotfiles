@@ -7,8 +7,8 @@ exec --no-startup-id nm-applet
 exec xrandr --output DVI-D-0 --auto --right-of HDMI-A-0
 exec setxkbmap -option "caps:super"
 exec nitrogen --restore
-exec alacritty --hold -e sudo pacman -Syu
-exec unclutter --timeout 2
+exec kitty --hold sh -c "sudo pacman -Syu"
+exec xbanish -t1
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
@@ -30,7 +30,7 @@ smart_borders on
 
 tiling_drag modifier titlebar
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 bindsym Print exec flameshot gui
 bindsym $mod+u exec setxkbmap us
