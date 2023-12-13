@@ -1,34 +1,77 @@
-vim.keymap.set("i", "jk", "<escape>", {})
-vim.keymap.set("n", "<leader>n", [[:NvimTreeToggle<CR>]], {})
-vim.keymap.set("n", "<leader>g", [[:Git<CR>]], {})
-vim.keymap.set("n", "<leader>c", [[:noh<CR>]], {})
-vim.keymap.set("n", "<leader>e", [[:TroubleToggle<CR>]])
+vim.g.mapleader = " "
 
-vim.keymap.set("n", "<C-h>", "<C-w>h", {})
-vim.keymap.set("n", "<C-j>", "<C-w>j", {})
-vim.keymap.set("n", "<C-k>", "<C-w>k", {})
-vim.keymap.set("n", "<C-l>", "<C-w>l", {})
+local nv = {"n", "v"}
 
-vim.keymap.set("n", "<C-u>", "u", {})
-vim.keymap.set("n", "u", "", {})
+local function definepairs(replacement, char)
+  vim.keymap.set("o", "i" .. replacement, "i" .. char, {})
+  vim.keymap.set("o", "a" .. replacement, "a" .. char, {})
+end
 
-vim.keymap.set({ "n", "v" }, "<leader>b", "^", {})
-vim.keymap.set({ "n", "v" }, "<leader>w", "$", {})
-vim.keymap.set({ "n", "v" }, "^", "", {})
-vim.keymap.set({ "n", "v" }, "$", "", {})
+definepairs("b", "(")
+definepairs("s", "\"")
+definepairs("q", "'")
+definepairs("t", "{")
+definepairs("r", "[")
+definepairs("a", "<")
 
-vim.keymap.set({ "v", "n" }, ".", "<C-u>zz", {})
-vim.keymap.set({ "v", "n" }, ",", "<C-d>zz", {})
+vim.keymap.set(nv, "gm", "gM", {})
+vim.keymap.set(nv, "gM", "gMi", {})
 
-vim.keymap.set("o", "as", "a\"", {})
-vim.keymap.set("o", "is", "i\"", {})
-vim.keymap.set("o", "it", "i[", {})
-vim.keymap.set("o", "at", "a[", {})
-vim.keymap.set("o", "ic", "i<", {})
-vim.keymap.set("o", "ac", "a<", {})
+-- Moving between windows
+vim.keymap.set(nv, "<C-h>", "<C-w>h", {})
+vim.keymap.set(nv, "<C-j>", "<C-w>j", {})
+vim.keymap.set(nv, "<C-k>", "<C-w>k", {})
+vim.keymap.set(nv, "<C-l>", "<C-w>l", {})
 
-vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y", {})
-vim.keymap.set({ "n", "v" }, "<leader>v", "\"_", {})
+-- Same, but for terminal
+vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", {})
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j", {})
+vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k", {})
+vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l", {})
 
-vim.keymap.set("n", "<up>", "<nop>", { noremap = true })
-vim.keymap.set("n", "<down>", "<nop>", { noremap = true })
+-- Moving windows
+vim.keymap.set(nv, "<C-w>h", "<C-w>H", {})
+vim.keymap.set(nv, "<C-w>j", "<C-w>J", {})
+vim.keymap.set(nv, "<C-w>k", "<C-w>K", {})
+vim.keymap.set(nv, "<C-w>l", "<C-w>L", {})
+
+-- Resizing windows
+vim.keymap.set(nv, "<C-->", "<C-w>-", {})
+vim.keymap.set(nv, "<C-=>", "<C-w>+", {})
+vim.keymap.set(nv, "<C-,>", "<C-w><", {})
+vim.keymap.set(nv, "<C-.>", "<C-w>>", {})
+
+-- Make exiting insert mode in terminal mode easier
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", {})
+
+-- Center when moving around at high speeds
+vim.keymap.set(nv, "<C-u>", "<C-u>zz", {})
+vim.keymap.set(nv, "<C-d>", "<C-d>zz", {})
+vim.keymap.set(nv, "G", "Gzz", {})
+
+-- Delete line content. I didn't do ddO because that would extend comments if
+-- you were just above one.
+vim.keymap.set("n", "dc", "cc<ESC>", {})
+
+-- Make going to the end of a line as easy as going to the beginning
+vim.keymap.set({"n", "v", "o"}, "+", "$", {})
+
+-- Allow yanking to system clipboard
+vim.keymap.set(nv, "<leader>y", "\"+y", {})
+vim.keymap.set(nv, "<leader>p", "\"+p", {})
+
+-- Commands
+vim.keymap.set(nv, "<leader>c", "<CMD>noh<CR>", {silent=true})
+vim.keymap.set(nv, "<leader>e", "<CMD>Ex<CR>", {silent=true})
+vim.keymap.set(nv, "<leader>t", function()
+  vim.cmd("split")
+  vim.cmd("term")
+end, {silent=true})
+
+-- Common typo with me
+vim.api.nvim_create_user_command("W",   "w",   {bang=true})
+vim.api.nvim_create_user_command("Wa",  "wa",  {bang=true})
+vim.api.nvim_create_user_command("Wq",  "wq",  {bang=true})
+vim.api.nvim_create_user_command("Wqa", "wqa", {bang=true})
+vim.api.nvim_create_user_command("Q",   "q",   {bang=true})
+vim.api.nvim_create_user_command("Qa",  "qa",  {bang=true})

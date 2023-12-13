@@ -1,44 +1,35 @@
-font pango:Mononoki Nerd Font Mono 10
+
+
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+
+font pango:JetBrainsMono Nerd Font 9
 
 exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id setxkbmap -option caps:super
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-
-exec xrandr --output DVI-D-0 --auto --right-of HDMI-A-0
-exec setxkbmap -option "caps:super"
-exec nitrogen --restore
-exec kitty --hold sh -c "sudo pacman -Syu"
-exec xbanish -t1
+exec_always --no-startup-id ~/.config/i3/polybar.sh
 
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-bindsym XF86AudioPause exec --no-startup-id playerctl play-pause && $refresh_i3status
-bindsym XF86AudioNext exec --no-startup-id playerctl next && $refresh_i3status
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous && $refresh_i3status
-
-set $up k
-set $down j
-set $left h
-set $right l
-set $mod Mod4
+bindsym Print exec --no-startup-id flameshot gui
 
 floating_modifier $mod
-smart_borders on
 
 tiling_drag modifier titlebar
 
-bindsym $mod+Return exec kitty
-
-bindsym Print exec flameshot gui
-bindsym $mod+u exec setxkbmap us
-bindsym $mod+n exec setxkbmap nl
+bindsym $mod+Return exec i3-sensible-terminal
 
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
+bindsym $mod+d exec --no-startup-id dmenu_run
 
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
@@ -66,9 +57,6 @@ bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent
 
-bindsym $mod+Shift+minus move scratchpad
-
-bindsym $mod+minus scratchpad show
 
 set $ws1 "1"
 set $ws2 "2"
@@ -92,9 +80,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-bindsym $mod+i workspace number $ws1
-bindsym $mod+t workspace number $ws2
-bindsym $mod+o workspace number $ws3
+bindsym $mod+c workspace number $ws8
 bindsym $mod+z workspace number $ws9
 bindsym $mod+x workspace number $ws10
 
@@ -109,24 +95,19 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod+Shift+i move container to workspace number $ws1
-bindsym $mod+Shift+t move container to workspace number $ws2
-bindsym $mod+Shift+o move container to workspace number $ws3
+bindsym $mod+Shift+c move container to workspace number $ws8
 bindsym $mod+Shift+z move container to workspace number $ws9
 bindsym $mod+Shift+x move container to workspace number $ws10
 
-bindsym $mod+Ctrl+l move workspace to output right
-bindsym $mod+Ctrl+h move workspace to output left
-
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+t reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "resize" {
-  bindsym $left       resize shrink width 10 px or 10 ppt
-  bindsym $down       resize grow height 10 px or 10 ppt
-  bindsym $up         resize shrink height 10 px or 10 ppt
-  bindsym $right      resize grow width 10 px or 10 ppt
+  bindsym $left resize shrink width 10 px or 10 ppt
+  bindsym $up resize grow height 10 px or 10 ppt
+  bindsym $down resize shrink height 10 px or 10 ppt
+  bindsym $right resize grow width 10 px or 10 ppt
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
@@ -134,20 +115,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-set $yellow  #ffd866
-set $dyellow #f48f3d
-set $gray    #333333
-set $lgray   #888888
-set $black   #000000
-set $white   #ffffff
-
-client.focused          $yellow  $yellow  $black  #2e9ef4   $dyellow
-client.focused_inactive $dyellow $dyellow $black  #484e50   $gray
-client.unfocused        $gray    $gray    $lgray  #292d2e   $gray
-client.urgent           #2f343a  #900000  #ffffff #900000   #900000
-client.placeholder      #000000  #0c0c0c  #ffffff #000000   #0c0c0c
-
-client.background       #ffffff
-
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh

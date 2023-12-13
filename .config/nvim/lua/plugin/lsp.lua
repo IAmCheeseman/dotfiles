@@ -7,19 +7,6 @@ lsp.ensure_installed {
   "lua_ls",
   "clangd",
   "cmake",
-  "rust_analyzer",
-  "omnisharp"
-}
-
-lspconfig.gdscript.setup {}
-
-lspconfig.omnisharp.setup {
-  cmd = {
-    "/usr/bin/omnisharp",
-    "--languageserver",
-    "--hostPID",
-    tostring(vim.fn.getpid())
-  }
 }
 
 local cmp = require("cmp")
