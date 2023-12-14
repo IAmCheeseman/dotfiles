@@ -1,27 +1,27 @@
 return require("packer").startup(function(use)
-  use { "wbthomason/packer.nvim" }
+  use {"wbthomason/packer.nvim"}
   
   use {
     "nvim-telescope/telescope.nvim",
     requires = {
-      { "nvim-lua/plenary.nvim" }
+      { "nvim-lua/plenary.nvim"}
     },
   }
 
-  use { "Yggdroot/indentLine" }
-  use { "windwp/nvim-autopairs" }
-  use { "airblade/vim-gitgutter" }
+  use {"Yggdroot/indentLine"}
+  use {"windwp/nvim-autopairs"}
+  use {"airblade/vim-gitgutter"}
 
   use {
     "folke/trouble.nvim",
     requires = {
-      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-tree/nvim-web-devicons"},
     }
   }
 
-  use { "tpope/vim-fugitive" }
-  use { "numToStr/Comment.nvim" }
-  use { "HiPhish/nvim-ts-rainbow2" }
+  use {"tpope/vim-fugitive"}
+  use {"numToStr/Comment.nvim"}
+  use {"HiPhish/nvim-ts-rainbow2"}
   
   use {
     "VonHeikemen/lsp-zero.nvim",
@@ -45,13 +45,20 @@ return require("packer").startup(function(use)
     }
   }
 
-  use { "tikhomirov/vim-glsl" }
+  use {"tikhomirov/vim-glsl"}
 
-  use { "michaeljsmith/vim-indent-object" }
+  use {"michaeljsmith/vim-indent-object"}
 
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate"
+  }
+
+  use {
+    "loctvl842/monokai-pro.nvim",
+    config = function()
+      vim.cmd("colorscheme monokai-pro-spectrum")
+    end
   }
 
   use {

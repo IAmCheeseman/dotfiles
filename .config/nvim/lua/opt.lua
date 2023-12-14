@@ -1,5 +1,3 @@
-vim.cmd("colorscheme mine")
-
 vim.o.termguicolors = true
 vim.o.relativenumber = true
 vim.o.number = true

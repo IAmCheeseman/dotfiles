@@ -3,26 +3,29 @@ local lspconfig = require("lspconfig")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed {
-  "lua_ls",
-  "clangd",
-  "cmake",
+lspconfig.lua_ls.setup {}
+lspconfig.clangd.setup {}
+
+require('mason').setup {}
+require('mason-lspconfig').setup {
+  ensure_installed = {
+    "lua_ls",
+    "clangd",
+  },
+  handlers = {
+    lsp.default_setup,
+  },
 }
 
-local cmp = require("cmp")
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_mappings = lsp.defaults.cmp_mappings {
-  ["<down>"] = cmp.mapping.select_next_item(cmp_select),
-  ["<up>"] = cmp.mapping.select_prev_item(cmp_select),
-  ["<C-a>"] = cmp.mapping.confirm({ select = true }),
-  ["<CR>"] = cmp.mapping.confirm({ select = true }),
-}
-
-lsp.setup_nvim_cmp {
-  mapping = cmp_mappings
-}
-
-lsp.set_preferences {
+local cmp = require('cmp')
+cmp.setup {
+  mapping = cmp.mapping.preset.insert({
+    -- `Enter` key to confirm completion
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    -- `Tab` key to navigate
+    ['<S-Tab>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
+    ['<Tab>'] = cmp.mapping.select_next_item({behavior = 'select'}),
+  })
 }
 
 lsp.on_attach(function(_, buffer)

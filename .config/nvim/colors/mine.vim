@@ -32,12 +32,12 @@ hi Number       guifg=#55bb55 guibg=NONE    gui=NONE
 hi String       guifg=#ff99ff guibg=NONE    gui=italic
 hi Boolean      guifg=#99ff99 guibg=NONE    gui=italic
 
-hi Identifier   guifg=#ffdd80 guibg=NONE    gui=NONE
+hi Identifier   guifg=#ffcc80 guibg=NONE    gui=NONE
 hi Function     guifg=#99ffff guibg=NONE    gui=italic
 
 hi Statement    guifg=#ff7099 guibg=NONE    gui=NONE
 hi Label        guifg=#ff7099 guibg=NONE    gui=italic
-hi Operator     guifg=#ffffff guibg=NONE    gui=NONE
+hi Operator     guifg=#c5c8c6 guibg=NONE    gui=NONE
 
 hi PreProc      guifg=#ff9977 guibg=NONE    gui=NONE
 
@@ -45,7 +45,7 @@ hi Type         guifg=#9999ff guibg=NONE    gui=italic
 hi StorageClass guifg=#99ffff guibg=NONE    gui=italic
 hi Structure    guifg=#99ffff guibg=NONE    gui=italic
 
-hi Special      guifg=#ff9977 guibg=NONE    gui=italic
+hi Special      guifg=#ff9977 guibg=NONE    gui=NONE
 hi SpecialChar  guifg=#ffffff guibg=NONE    gui=bold,italic
 
 hi Error        guifg=#ff4444 guibg=NONE    gui=bold,undercurl
