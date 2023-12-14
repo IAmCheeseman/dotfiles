@@ -12,7 +12,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id setxkbmap -option caps:super
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec_always --no-startup-id ~/.config/i3/polybar.sh
+exec --no-startup-id nitrogen --restore
+exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
