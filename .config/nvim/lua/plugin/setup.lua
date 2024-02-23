@@ -31,9 +31,6 @@ require("nvim-treesitter.configs").setup {
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true },
-  rainbow = {
-    enable = true,
-  }
 }
 
 do
@@ -44,3 +41,5 @@ do
   	builtin.grep_string({ search = vim.fn.input("grep>") })
   end)
 end
+
+vim.keymap.set("n", "<leader>i", "<CMD>TroubleToggle<CR>")
