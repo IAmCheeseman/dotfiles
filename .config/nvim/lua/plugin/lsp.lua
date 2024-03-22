@@ -5,6 +5,8 @@ lsp.preset("recommended")
 
 lspconfig.lua_ls.setup {}
 lspconfig.clangd.setup {}
+lspconfig.gdscript.setup {}
+
 
 require('mason').setup {}
 require('mason-lspconfig').setup {
