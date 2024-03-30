@@ -10,7 +10,6 @@ return require("packer").startup(function(use)
 
   use {"Yggdroot/indentLine"}
   use {"windwp/nvim-autopairs"}
-  use {"airblade/vim-gitgutter"}
 
   use {
     "folke/trouble.nvim",
@@ -19,6 +18,7 @@ return require("packer").startup(function(use)
     }
   }
 
+  use {"lewis6991/gitsigns.nvim"}
   use {"tpope/vim-fugitive"}
   use {"numToStr/Comment.nvim"}
   use {"HiPhish/nvim-ts-rainbow2"}
