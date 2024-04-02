@@ -56,9 +56,6 @@ return require("packer").startup(function(use)
 
   use {
     "loctvl842/monokai-pro.nvim",
-    config = function()
-      vim.cmd("colorscheme monokai-pro-spectrum")
-    end
   }
 
   use {

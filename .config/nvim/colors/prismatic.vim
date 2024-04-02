@@ -32,14 +32,14 @@ let s:bg          = s:black
 
 let s:comment_fg  = { "gui": "#65737E", "cterm": "241" }
 let s:gutter_bg   = { "gui": "#242424", "cterm": "236" }
-let s:gutter_fg   = s:blue
+let s:gutter_fg   = { "gui": "#514d4d", "cterm": "237" }
 let s:non_text    = { "gui": "#373C45", "cterm": "239" }
 
 let s:cursor_line = { "gui": "#403c3c", "cterm": "237" }
-let s:color_col   = { "gui": "#313640", "cterm": "237" }
+let s:color_col   = { "gui": "#403c3c", "cterm": "237" }
 
 let s:selection   = { "gui": "#403c3c", "cterm": "239" }
-let s:vertsplit   = { "gui": "#313640", "cterm": "237" }
+let s:vertsplit   = { "gui": "#403c3c", "cterm": "237" }
 
 
 function! s:h(group, fg, bg, attr)
@@ -85,8 +85,8 @@ call s:h("MoreMsg", s:fg, "", "")
 call s:h("WarningMsg", s:red, "", "")
 call s:h("Question", s:purple, "", "")
 
-call s:h("Pmenu", s:bg, s:fg, "")
-call s:h("PmenuSel", s:fg, s:blue, "")
+call s:h("Pmenu", s:fg, s:bg, "")
+call s:h("PmenuSel", s:bg, s:fg, "")
 call s:h("PmenuSbar", "", s:selection, "")
 call s:h("PmenuThumb", "", s:fg, "")
 
@@ -95,8 +95,8 @@ call s:h("SpellCap", s:yellow, "", "")
 call s:h("SpellLocal", s:yellow, "", "")
 call s:h("SpellRare", s:yellow, "", "")
 
-call s:h("StatusLine", s:blue, s:cursor_line, "")
-call s:h("StatusLineNC", s:comment_fg, s:cursor_line, "")
+call s:h("StatusLine", s:white, s:cursor_line, "")
+call s:h("StatusLineNC", s:white, s:bg, "")
 call s:h("TabLine", s:comment_fg, s:cursor_line, "")
 call s:h("TabLineFill", s:comment_fg, s:cursor_line, "")
 call s:h("TabLineSel", s:fg, s:bg, "")
