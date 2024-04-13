@@ -36,7 +36,6 @@ for_window [instance="Godot_Engine"] floating enable
 tiling_drag modifier titlebar
 
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+b exec librewolf
 
 bindsym $mod+Shift+q kill
 
@@ -59,15 +58,15 @@ bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
 
-bindsym $mod+s layout stacking
+bindsym $mod+y layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+p layout toggle split
 
 bindsym $mod+Shift+space floating toggle
 
 bindsym $mod+space focus mode_toggle
 
-bindsym $mod+a focus parent
+bindsym $mod+b focus parent
 
 
 set $ws1 "1"
@@ -125,8 +124,7 @@ client.background       #ffffff
 
 mode "resize" {
   bindsym $left resize shrink width 10 px or 10 ppt
-  bindsym $up resize grow height 10 px or 10 ppt
-  bindsym $down resize shrink height 10 px or 10 ppt
+  bindsym $up resize grow height 10 px or 10 ppt  bindsym $down resize shrink height 10 px or 10 ppt
   bindsym $right resize grow width 10 px or 10 ppt
 
   bindsym Return mode "default"

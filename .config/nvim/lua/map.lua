@@ -25,9 +25,9 @@ vim.keymap.set(nv, "<C-l>", "<C-w>l", {})
 
 -- Same, but for terminal
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", {})
-vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j", {})
-vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k", {})
-vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l", {})
+vim.keymap.set("t", "<C-t>", "<C-\\><C-n><C-w>j", {})
+vim.keymap.set("t", "<C-n>", "<C-\\><C-n><C-w>k", {})
+vim.keymap.set("t", "<C-s>", "<C-\\><C-n><C-w>l", {})
 
 -- Moving windows
 vim.keymap.set(nv, "<C-w>h", "<C-w>H", {})
