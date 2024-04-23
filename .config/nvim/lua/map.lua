@@ -44,9 +44,13 @@ vim.keymap.set(nv, "<C-.>", "<C-w>>", {})
 -- Make exiting insert mode in terminal mode easier
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", {})
 
+-- Make it harder to accidentally undo
+vim.keymap.set(nv, "<C-u>", "u", {})
+vim.keymap.set(nv, "u", "<nop>", {})
+
 -- Center when moving around at high speeds
-vim.keymap.set(nv, "<C-u>", "<C-u>zz", {})
-vim.keymap.set(nv, "<C-d>", "<C-d>zz", {})
+vim.keymap.set(nv, "<A-k>", "<C-u>zz", {})
+vim.keymap.set(nv, "<A-j>", "<C-d>zz", {})
 vim.keymap.set(nv, "G", "Gzz", {})
 
 -- Delete line content. I didn't do ddO because that would extend comments if
@@ -57,11 +61,11 @@ vim.keymap.set("n", "dc", "cc<ESC>", {})
 vim.keymap.set({"n", "v", "o"}, "+", "$", {})
 
 -- Allow yanking to system clipboard
-vim.keymap.set(nv, "<leader>y", "\"+y", {})
-vim.keymap.set(nv, "<leader>p", "\"+p", {})
+vim.keymap.set(nv, "yc", "\"+y", {})
+vim.keymap.set(nv, "pc", "\"+p", {})
 
 -- Commands
-vim.keymap.set(nv, "<leader>c", "<CMD>noh<CR>", {silent=true})
+vim.keymap.set(nv, "<leader>c", "<CMD>set invhlsearch<CR>", {silent=true})
 vim.keymap.set(nv, "<leader>e", "<CMD>Ex<CR>", {silent=true})
 vim.keymap.set(nv, "<leader>t", function()
   vim.cmd("split")

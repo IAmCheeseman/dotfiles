@@ -1,6 +1,6 @@
 return require("packer").startup(function(use)
   use {"wbthomason/packer.nvim"}
-  
+
   use {
     "nvim-telescope/telescope.nvim",
     requires = {
@@ -18,11 +18,16 @@ return require("packer").startup(function(use)
     }
   }
 
+  use {
+    "nvim-lualine/lualine.nvim",
+    requires = { "nvim-tree/nvim-web-devicons", opt = true }
+  }
+
   use {"lewis6991/gitsigns.nvim"}
   use {"tpope/vim-fugitive"}
   use {"numToStr/Comment.nvim"}
   use {"HiPhish/nvim-ts-rainbow2"}
-  
+
   use {
     "VonHeikemen/lsp-zero.nvim",
     requires = {

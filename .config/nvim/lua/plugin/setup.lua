@@ -2,6 +2,13 @@ require('gitsigns').setup {}
 
 require("Comment").setup {}
 
+require("lualine").setup {
+  options = {
+    component_separators = { left = "", right = ""  },
+    section_separators = { left = "", right = ""  },
+  },
+}
+
 require("nvim-autopairs").setup {
   fast_wrap = {
     map = "<M-e>",
@@ -37,9 +44,9 @@ require("nvim-treesitter.configs").setup {
 
 do
   local builtin = require("telescope.builtin")
-  vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-  vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
-  vim.keymap.set("n", "<leader>fs", function()
+  vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+  vim.keymap.set("n", "<C-g>", builtin.git_files, {})
+  vim.keymap.set("n", "<C-o>", function()
   	builtin.grep_string({ search = vim.fn.input("grep>") })
   end)
 end

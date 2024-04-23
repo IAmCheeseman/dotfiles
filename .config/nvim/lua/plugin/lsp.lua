@@ -7,7 +7,6 @@ lspconfig.lua_ls.setup {}
 lspconfig.clangd.setup {}
 lspconfig.gdscript.setup {}
 
-
 require('mason').setup {}
 require('mason-lspconfig').setup {
   ensure_installed = {
@@ -31,7 +30,7 @@ cmp.setup {
   })
 }
 
-lsp.on_attach(function(_, buffer)
+lsp.on_attach(function(client, buffer)
   local opts = { buffer=buffer, remap=false }
 
   vim.keymap.set("n", "<leader>ld",  function() vim.lsp.buf.definition() end, opts)
