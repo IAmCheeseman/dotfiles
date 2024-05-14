@@ -66,7 +66,7 @@ vim.keymap.set(nv, "pc", "\"+p", {})
 
 -- Commands
 vim.keymap.set(nv, "<leader>c", "<CMD>set invhlsearch<CR>", {silent=true})
-vim.keymap.set(nv, "<leader>e", "<CMD>Ex<CR>", {silent=true})
+vim.keymap.set(nv, "<leader>e", "<CMD>Oil<CR>", {silent=true})
 vim.keymap.set(nv, "<leader>t", function()
   vim.cmd("split")
   vim.cmd("term")

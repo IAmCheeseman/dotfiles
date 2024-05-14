@@ -50,6 +50,8 @@ return require("packer").startup(function(use)
     }
   }
 
+  use { "stevearc/oil.nvim" }
+
   use {"tikhomirov/vim-glsl"}
 
   use {"michaeljsmith/vim-indent-object"}
