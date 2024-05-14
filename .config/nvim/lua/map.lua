@@ -25,9 +25,9 @@ vim.keymap.set(nv, "<C-l>", "<C-w>l", {})
 
 -- Same, but for terminal
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", {})
-vim.keymap.set("t", "<C-t>", "<C-\\><C-n><C-w>j", {})
-vim.keymap.set("t", "<C-n>", "<C-\\><C-n><C-w>k", {})
-vim.keymap.set("t", "<C-s>", "<C-\\><C-n><C-w>l", {})
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j", {})
+vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k", {})
+vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l", {})
 
 -- Moving windows
 vim.keymap.set(nv, "<C-w>h", "<C-w>H", {})
@@ -61,8 +61,8 @@ vim.keymap.set("n", "dc", "cc<ESC>", {})
 vim.keymap.set({"n", "v", "o"}, "+", "$", {})
 
 -- Allow yanking to system clipboard
-vim.keymap.set(nv, "yc", "\"+y", {})
-vim.keymap.set(nv, "pc", "\"+p", {})
+vim.keymap.set(nv, "<C-c>", "\"+y", {})
+vim.keymap.set(nv, "<C-v>", "\"+p", {})
 
 -- Commands
 vim.keymap.set(nv, "<leader>c", "<CMD>set invhlsearch<CR>", {silent=true})
