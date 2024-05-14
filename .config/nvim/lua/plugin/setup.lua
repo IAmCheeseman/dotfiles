@@ -1,3 +1,5 @@
+vim.g.virtcolumn_char = '▕'
+
 require('gitsigns').setup {}
 
 require("Comment").setup {}

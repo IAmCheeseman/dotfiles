@@ -9,7 +9,6 @@ vim.o.mouse = ""
 vim.o.cc = "80"
 vim.o.splitright = true
 vim.o.splitbelow = true
-
 local tabwidth = 2
 vim.o.tabstop = tabwidth
 vim.o.shiftwidth = tabwidth
