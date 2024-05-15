@@ -16,4 +16,4 @@ If you want it, add it like so:
 - Change `bg0` to #333333.
 - Change `bg1` to #444444.
 - Change `fg0` to #FFFFFF.
-  
+- Change `font` to `"JetBrainsMono Nerd Font Medium 12"`.
