@@ -61,8 +61,8 @@ vim.keymap.set("n", "dc", "cc<ESC>", {})
 vim.keymap.set({"n", "v", "o"}, "+", "$", {})
 
 -- Allow yanking to system clipboard
-vim.keymap.set(nv, "<C-c>", "\"+y", {})
-vim.keymap.set(nv, "<C-v>", "\"+p", {})
+vim.keymap.set(nv, "<leader>y", "\"+y", {})
+vim.keymap.set(nv, "<leader>p", "\"+p", {})
 
 -- Commands
 vim.keymap.set(nv, "<leader>c", "<CMD>set invhlsearch<CR>", {silent=true})

@@ -10,8 +10,53 @@ require("oil").setup {
   },
 }
 
+vim.cmd.colorscheme("mine")
+
+local colors = {
+  white = "#FFFFFF",
+  pink = "#FF4499",
+  dark_pink = "#D8225F",
+  green = "#22CC55",
+  bg = "#222222",
+  bg_alt = "#333333",
+}
+
+local theme = {
+  normal = {
+    a = {bg = colors.pink, fg = colors.white, gui = 'bold,italic'},
+    b = {bg = colors.bg, fg = colors.white},
+    c = {bg = colors.bg, fg = colors.white}
+  },
+  insert = {
+    a = {bg = colors.dark_pink, fg = colors.white, gui = 'bold,italic'},
+    b = {bg = colors.bg, fg = colors.white},
+    c = {bg = colors.bg, fg = colors.white}
+  },
+  visual = {
+    a = {bg = colors.green, fg = colors.white, gui = 'bold,italic'},
+    b = {bg = colors.lightgray, fg = colors.white},
+    c = {bg = colors.lightgray, fg = colors.white}
+  },
+  replace = {
+    a = {bg = colors.pink, fg = colors.whtie, gui = 'bold,italic'},
+    b = {bg = colors.bg, fg = colors.white},
+    c = {bg = colors.bg, fg = colors.white}
+  },
+  command = {
+    a = {bg = colors.bg_alt, fg = colors.black, gui = 'bold,italic'},
+    b = {bg = colors.bg, fg = colors.white},
+    c = {bg = colors.bg, fg = colors.white}
+  },
+  inactive = {
+    a = {bg = colors.pink, fg = colors.white, gui = 'bold,italic'},
+    b = {bg = colors.bg, fg = colors.white},
+    c = {bg = colors.bg, fg = colors.white}
+  }
+}
+
 require("lualine").setup {
   options = {
+    theme = theme,
     component_separators = { left = "", right = ""  },
     section_separators = { left = "", right = ""  },
   },
