@@ -19,7 +19,7 @@ hi LineNr       guifg=#666666 guibg=NONE    gui=NONE
 hi LineNrAbove  guifg=#666666 guibg=NONE    gui=NONE
 hi LineNrBelow  guifg=#666666 guibg=NONE    gui=NONE
 hi MatchParen   guifg=#000000 guibg=#FF0000 gui=bold
-hi Normal       guifg=#AAAAAA guibg=NONE    gui=NONE
+hi Normal       guifg=#AAAAAA guibg=#111111 gui=NONE
 hi Pmenu        guifg=#ffffff guibg=#333333 gui=NONE
 hi PmenuSel     guifg=#333333 guibg=#ffffff gui=bold,underdouble
 hi Search       guifg=#333333 guibg=#ffff88 gui=bold,italic

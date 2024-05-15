@@ -28,7 +28,7 @@ return require("packer").startup(function(use)
   use {"numToStr/Comment.nvim"}
   use {"HiPhish/nvim-ts-rainbow2"}
 
-  use {"xiyaowong/transparent.nvim"}
+  -- use {"xiyaowong/transparent.nvim"}
   use {"xiyaowong/virtcolumn.nvim"}
 
   use {
