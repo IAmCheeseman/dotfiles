@@ -29,7 +29,7 @@ hi Comment      guifg=#777777 guibg=NONE    gui=italic
 
 hi Constant     guifg=#44FF99 guibg=NONE    gui=NONE
 hi Number       guifg=#44FF99 guibg=NONE    gui=NONE
-hi String       guifg=#CCFF66 guibg=NONE    gui=italic
+hi String       guifg=#FFFF00 guibg=NONE    gui=italic
 hi Boolean      guifg=#44FF99 guibg=NONE    gui=italic
 
 hi Identifier   guifg=#FFFFFF guibg=NONE    gui=NONE

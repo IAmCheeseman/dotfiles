@@ -2,18 +2,6 @@ vim.g.mapleader = " "
 
 local nv = {"n", "v"}
 
-local function definepairs(replacement, char)
-  vim.keymap.set("o", "i" .. replacement, "i" .. char, {})
-  vim.keymap.set("o", "a" .. replacement, "a" .. char, {})
-end
-
-definepairs("b", "(")
-definepairs("s", "\"")
-definepairs("q", "'")
-definepairs("t", "{")
-definepairs("r", "[")
-definepairs("a", "<")
-
 vim.keymap.set(nv, "gm", "gM", {})
 vim.keymap.set(nv, "gM", "gMi", {})
 
@@ -44,18 +32,10 @@ vim.keymap.set(nv, "<C-.>", "<C-w>>", {})
 -- Make exiting insert mode in terminal mode easier
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", {})
 
--- Make it harder to accidentally undo
-vim.keymap.set(nv, "<C-u>", "u", {})
-vim.keymap.set(nv, "u", "<nop>", {})
-
 -- Center when moving around at high speeds
-vim.keymap.set(nv, "<A-k>", "<C-u>zz", {})
-vim.keymap.set(nv, "<A-j>", "<C-d>zz", {})
+vim.keymap.set(nv, "<C-u>", "<C-u>zz", {})
+vim.keymap.set(nv, "<C-d>", "<C-d>zz", {})
 vim.keymap.set(nv, "G", "Gzz", {})
-
--- Delete line content. I didn't do ddO because that would extend comments if
--- you were just above one.
-vim.keymap.set("n", "dc", "cc<ESC>", {})
 
 -- Make going to the end of a line as easy as going to the beginning
 vim.keymap.set({"n", "v", "o"}, "+", "$", {})

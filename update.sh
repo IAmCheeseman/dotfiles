@@ -1,8 +1,8 @@
 rm -rf .config/
 mkdir .config/
 
-# Kitty
-cp -r ~/.config/kitty .config/
+# Alacritty
+cp -r ~/.config/alacritty .config/
 
 # Neovim
 cp -r ~/.config/nvim .config/
