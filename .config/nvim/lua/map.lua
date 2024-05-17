@@ -59,3 +59,5 @@ vim.api.nvim_create_user_command("Wq",  "wq",  {bang=true})
 vim.api.nvim_create_user_command("Wqa", "wqa", {bang=true})
 vim.api.nvim_create_user_command("Q",   "q",   {bang=true})
 vim.api.nvim_create_user_command("Qa",  "qa",  {bang=true})
+
+vim.api.nvim_create_user_command("ClangFormat", "!clang-format -i %", {})

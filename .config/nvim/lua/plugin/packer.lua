@@ -34,6 +34,7 @@ return require("packer").startup(function(use)
   use {
     "VonHeikemen/lsp-zero.nvim",
     requires = {
+      {"lukas-reineke/lsp-format.nvim"},
       -- LSP Support
       {"neovim/nvim-lspconfig"},
       {"williamboman/mason.nvim"},
