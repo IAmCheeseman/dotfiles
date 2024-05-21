@@ -97,6 +97,14 @@ require("nvim-treesitter.configs").setup {
 
 do
   local builtin = require("telescope.builtin")
+  require("telescope").setup {
+    pickers = {
+      find_files = {
+        theme = "dropdown",
+      }
+    }
+  }
+
   vim.keymap.set("n", "<C-o>", builtin.find_files, {})
   vim.keymap.set("n", "<C-g>", builtin.git_files, {})
   vim.keymap.set("n", "<C-f>", function()

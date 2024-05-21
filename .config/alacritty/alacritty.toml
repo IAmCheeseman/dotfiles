@@ -1,12 +1,15 @@
 [window]
 dynamic_padding = true
-opacity = 0.9
+opacity = 1.0
 
 [font]
 normal      = {family="JetBrainsMono Nerd Font", style="Regular"}
 bold        = {family="JetBrainsMono Nerd Font", style="Bold"}
 italic      = {family="JetBrainsMono Nerd Font", style="Italic"}
 bold_italic = {family="JetBrainsMono Nerd Font", style="Bold Italic"}
+
+offset.x = 0
+offset.y = 0
 
 size = 11
 
@@ -15,7 +18,7 @@ draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 foreground = "#FFFFFF"
-background = "#000000"
+background = "#111111"
 
 [colors.normal]
 black = "#444444"
