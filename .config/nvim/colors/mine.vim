@@ -44,6 +44,7 @@ hi Operator     guifg=#AAAABB guibg=NONE    gui=NONE
 
 hi PreProc      guifg=#FF4499 guibg=NONE    gui=NONE
 
+hi Typedef      guifg=#997FFF guibg=NONE    gui=italic
 hi Type         guifg=#997FFF guibg=NONE    gui=italic
 hi StorageClass guifg=#4499FF guibg=NONE    gui=italic
 hi Structure    guifg=#4499FF guibg=NONE    gui=bold,italic
@@ -54,3 +55,7 @@ hi SpecialChar  guifg=#ffffff guibg=NONE    gui=bold,italic
 hi Error        guifg=#ff4444 guibg=NONE    gui=bold,undercurl
 
 hi Todo         guifg=#ffffff guibg=NONE    gui=bold,italic,underline
+
+hi Added        guifg=#44FF44 guibg=NONE    gui=NONE
+hi Changed      guifg=#FFFF44 guibg=NONE    gui=NONE
+hi Removed      guifg=#FF4444 guibg=NONE    gui=NONE

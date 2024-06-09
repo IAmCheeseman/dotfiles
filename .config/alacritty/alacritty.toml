@@ -3,10 +3,10 @@ dynamic_padding = true
 opacity = 1.0
 
 [font]
-normal      = {family="JetBrainsMono Nerd Font", style="Regular"}
-bold        = {family="JetBrainsMono Nerd Font", style="Bold"}
-italic      = {family="JetBrainsMono Nerd Font", style="Italic"}
-bold_italic = {family="JetBrainsMono Nerd Font", style="Bold Italic"}
+normal      = {family="MartianMono Nerd Font Mono", style="Medium"}
+bold        = {family="MartianMono Nerd Font Mono", style="Bold"}
+italic      = {family="MartianMono Nerd Font Mono", style="Medium Italic"}
+bold_italic = {family="MartianMono Nerd Font Mono", style="Bold Italic"}
 
 offset.x = 0
 offset.y = 0
@@ -21,21 +21,21 @@ foreground = "#FFFFFF"
 background = "#111111"
 
 [colors.normal]
-black = "#444444"
-red = "#CC2233"
-green = "#11CC22"
+black = "#333333"
+red = "#990911"
+green = "#099911"
 yellow = "#CC9900"
-blue = "#3020CC"
-magenta = "#CC2288"
-cyan = "#11AADD"
-white = "#C0C0D3"
+blue = "#5511CC"
+magenta = "#990966"
+cyan = "#0077AA"
+white = "#999999"
 
 [colors.bright]
-black = "#222222"
+black = "#666666"
 red = "#ff2222"
 green = "#22ff44"
 yellow = "#ffff00"
-blue = "#3f30ff"
+blue = "#8833FF"
 magenta = "#ff4499"
 cyan = "#22ccff"
 white = "#FFFFFF"

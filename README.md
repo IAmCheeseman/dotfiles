@@ -2,7 +2,7 @@
 
 My dotfiles.
 
-I use the JetBrains Nerd Font everywhere. Find it [here](https://www.nerdfonts.com/font-downloads).
+I use the MartianMono Nerd Font everywhere. Find it [here](https://www.nerdfonts.com/font-downloads).
 
 My wallpaper is [here](https://github.com/whoisYoges/lwalpapers/blob/PicturesOnly/wallpapers/b-314.jpg).
 
