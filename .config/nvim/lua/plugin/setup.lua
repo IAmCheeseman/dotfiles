@@ -10,6 +10,8 @@ require("oil").setup {
   },
 }
 
+require("presence").setup {}
+
 vim.cmd.colorscheme("mine")
 
 local colors = {

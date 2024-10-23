@@ -40,9 +40,11 @@ vim.keymap.set(nv, "G", "Gzz", {})
 -- Make going to the end of a line as easy as going to the beginning
 vim.keymap.set({"n", "v", "o"}, "+", "$", {})
 
--- Allow yanking to system clipboard
+-- Yanking and pasting
 vim.keymap.set(nv, "<leader>y", "\"+y", {})
 vim.keymap.set(nv, "<leader>p", "\"+p", {})
+vim.keymap.set("x", "p", "\"_dP", {})
+vim.keymap.set("x", "<leader>P", "p", {})
 
 -- Commands
 vim.keymap.set(nv, "<leader>c", "<CMD>set invhlsearch<CR>", {silent=true})
@@ -51,6 +53,8 @@ vim.keymap.set(nv, "<leader>t", function()
   vim.cmd("split")
   vim.cmd("term")
 end, {silent=true})
+vim.keymap.set("n", "{", "<CMD>cp<CR>", {silent=true})
+vim.keymap.set("n", "}", "<CMD>cn<CR>", {silent=true})
 
 -- Common typo with me
 vim.api.nvim_create_user_command("W",   "w",   {bang=true})

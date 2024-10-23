@@ -1,6 +1,10 @@
 return require("packer").startup(function(use)
   use {"wbthomason/packer.nvim"}
 
+  use {"andweeb/presence.nvim"}
+
+  use {"hobby-engine/hobby-script-vim"}
+
   use {
     "nvim-telescope/telescope.nvim",
     requires = {

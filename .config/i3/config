@@ -60,7 +60,7 @@ bindsym $mod+Shift+$right move right
 bindsym $mod+g split h
 bindsym $mod+v split v
 
-bindsym $mod+a fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 bindsym $mod+y layout stacking
 bindsym $mod+w layout tabbed
@@ -96,6 +96,7 @@ bindsym $mod+0 workspace number $ws10
 
 bindsym $mod+z workspace number $ws9
 bindsym $mod+x workspace number $ws10
+bindsym $mod+c workspace number $ws8
 
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -110,13 +111,14 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 bindsym $mod+Shift+z move container to workspace number $ws9
 bindsym $mod+Shift+x move container to workspace number $ws10
+bindsym $mod+Shift+c move container to workspace number $ws8
 
 bindsym $mod+Shift+t reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ff4499 #ff4499 #000000 #2e9ef4   #ff4499
+client.focused          #ff3399 #ff3399 #ffffff #2e9ef4   #ff3399
 client.focused_inactive #333333 #333333 #999999 #484e50   #333333
 client.unfocused        #000000 #000000 #999999 #292d2e   #000000
 client.urgent           #ff0000 #ff0000 #000000 #900000   #ffff00

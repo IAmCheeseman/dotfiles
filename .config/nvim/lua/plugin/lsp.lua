@@ -30,11 +30,6 @@ cmp.setup {
   })
 }
 
-require("lsp-format").setup {}
-require("lspconfig").clangd.setup {
-  on_attach = require("lsp-format").on_attach
-}
-
 lsp.on_attach(function(client, buffer)
   local opts = { buffer = buffer, remap = false }
 
@@ -51,3 +46,5 @@ lsp.setup()
 vim.diagnostic.config {
   virtual_text = true
 }
+
+vim.g.zig_fmt_autosave = 0
