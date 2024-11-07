@@ -58,7 +58,7 @@ return require("packer").startup(function(use)
     }
   }
 
-  use { "stevearc/oil.nvim" }
+  use {"stevearc/oil.nvim"}
 
   use {"tikhomirov/vim-glsl"}
 
@@ -69,9 +69,7 @@ return require("packer").startup(function(use)
     run = ":TSUpdate"
   }
 
-  use {
-    "loctvl842/monokai-pro.nvim",
-  }
+  use {"loctvl842/monokai-pro.nvim"}
 
   use {
     "danymat/neogen",
