@@ -28,7 +28,7 @@ return require("packer").startup(function(use)
   }
 
   use {"lewis6991/gitsigns.nvim"}
-  use {"tpope/vim-fugitive"}
+  -- use {"tpope/vim-fugitive"}
   use {"numToStr/Comment.nvim"}
   use {"HiPhish/nvim-ts-rainbow2"}
 
