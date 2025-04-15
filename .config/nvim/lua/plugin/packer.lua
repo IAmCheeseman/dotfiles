@@ -4,6 +4,7 @@ return require("packer").startup(function(use)
   use {"andweeb/presence.nvim"}
 
   use {"hobby-engine/hobby-script-vim"}
+  use {"~/den_vim"}
 
   use {
     "nvim-telescope/telescope.nvim",
@@ -12,7 +13,6 @@ return require("packer").startup(function(use)
     },
   }
 
-  use {"Yggdroot/indentLine"}
   use {"windwp/nvim-autopairs"}
 
   use {

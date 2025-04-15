@@ -6,11 +6,11 @@ set $right l
 
 font pango:MartianMono Nerd Font Medium 9
 
+exec --no-startup-id xrandr --output HDMI-A-1 --primary --mode 1920x1080 --rate 240 --output DVI-D-0 --mode 1024x768 --rate 60 --right-of HDMI-A-1
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id picom
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 
 exec --no-startup-id discord
@@ -25,11 +25,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause && $refresh_i3status
 bindsym XF86AudioNext exec --no-startup-id playerctl next && $refresh_i3status
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous && $refresh_i3status
+# bindsym $mod+u exec --no-startup-id setxkbmap -layout us -option caps:super
+# bindsym $mod+n exec --no-startup-id setxkbmap -layout fi -option caps:super
 
 bindsym Print exec --no-startup-id flameshot gui
 
 for_window [class="love"] floating enable
 for_window [instance="Godot_Engine"] floating enable
+for_window [class="steam"] floating enable
 
 gaps outer 0
 gaps inner 2
@@ -112,6 +115,11 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+z move container to workspace number $ws9
 bindsym $mod+Shift+x move container to workspace number $ws10
 bindsym $mod+Shift+c move container to workspace number $ws8
+
+bindsym $mod+braceleft focus output left
+bindsym $mod+braceright focus output right
+bindsym $mod+shift+braceleft move workspace to output left
+bindsym $mod+shift+braceright move workspace to output right
 
 bindsym $mod+Shift+t reload
 bindsym $mod+Shift+r restart
