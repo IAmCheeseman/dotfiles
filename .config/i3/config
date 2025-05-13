@@ -36,6 +36,9 @@ for_window [instance="Godot_Engine"] floating enable
 default_border pixel 2
 default_floating_border pixel 2
 
+gaps outer 0
+gaps inner 2
+
 floating_modifier $mod
 
 tiling_drag modifier titlebar
@@ -122,10 +125,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ffffff #ffffff #000000 #ffffff   #ffffff
+client.focused          #E0E0E0 #E0E0E0 #000000 #ffffff   #E0E0E0
 client.focused_inactive #222222 #222222 #CACACA #ffffff   #222222
 client.unfocused        #000000 #000000 #CACACA #ffffff   #000000
-client.urgent           #ff0000 #ff0000 #000000 #900000   #ffff00
+client.urgent           #ff0000 #ff0000 #000000 #900000   #ff0000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
