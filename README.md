@@ -2,11 +2,9 @@
 
 My dotfiles.
 
-I use the MartianMono Nerd Font everywhere. Find it [here](https://www.nerdfonts.com/font-downloads).
+I use the JetBrainsMono Nerd Font everywhere. Find it [here](https://www.nerdfonts.com/font-downloads).
 
-My wallpaper is [here](https://github.com/whoisYoges/lwalpapers/blob/PicturesOnly/wallpapers/b-314.jpg).
-
-![image](https://github.com/IAmCheeseman/dotfiles/assets/64710123/5cdc4272-4de3-4bac-92e9-0b3b246a69a3)
+![image](https://github.com/user-attachments/assets/4d4d341e-82aa-474b-b070-b21fa8c33b66)
 
 ## Neovim
 Install [Packer](https://github.com/wbthomason/packer.nvim).
@@ -18,15 +16,8 @@ someone else's theme.
 If you want it, add it like so:
 - Get the base theme [here](https://github.com/newmanls/rofi-themes-collection),
 it's the square material red.
-- Change `accent-color` to #FF4499.
-- Change `bg0` to #333333.
-- Change `bg1` to #444444.
+- Change `accent-color` to #E0E0E0.
+- Change `bg0` to #222222.
+- Change `bg1` to #333333.
 - Change `fg0` to #FFFFFF.
 - Change `font` to `"JetBrainsMono Nerd Font Medium 12"`.
-
-# Discord
-Install better discord and move the theme into there.
-
-# Spicetify
-Install spicetify, and [this theme](https://github.com/nimsandu/spicetify-bloom).
-Replace `color.ini` with `spicetify_bloom_colors.ini`.
