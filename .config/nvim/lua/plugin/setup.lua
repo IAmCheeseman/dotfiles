@@ -16,8 +16,8 @@ vim.cmd.colorscheme("mine")
 
 local colors = {
   white = "#FFFFFF",
-  pink = "#FF4499",
-  dark_pink = "#D8225F",
+  black = "#000000",
+  gray = "#A0A0A0",
   green = "#22CC55",
   bg = "#222222",
   bg_alt = "#333333",
@@ -25,12 +25,12 @@ local colors = {
 
 local theme = {
   normal = {
-    a = {bg = colors.pink, fg = colors.white, gui = 'bold,italic'},
+    a = {bg = colors.white, fg = colors.black, gui = 'bold,italic'},
     b = {bg = colors.bg, fg = colors.white},
     c = {bg = colors.bg, fg = colors.white}
   },
   insert = {
-    a = {bg = colors.dark_pink, fg = colors.white, gui = 'bold,italic'},
+    a = {bg = colors.gray, fg = colors.black, gui = 'bold,italic'},
     b = {bg = colors.bg, fg = colors.white},
     c = {bg = colors.bg, fg = colors.white}
   },
@@ -40,12 +40,12 @@ local theme = {
     c = {bg = colors.lightgray, fg = colors.white}
   },
   replace = {
-    a = {bg = colors.pink, fg = colors.whtie, gui = 'bold,italic'},
+    a = {bg = colors.pink, fg = colors.white, gui = 'bold,italic'},
     b = {bg = colors.bg, fg = colors.white},
     c = {bg = colors.bg, fg = colors.white}
   },
   command = {
-    a = {bg = colors.bg_alt, fg = colors.black, gui = 'bold,italic'},
+    a = {bg = colors.bg_alt, fg = colors.white, gui = 'bold,italic'},
     b = {bg = colors.bg, fg = colors.white},
     c = {bg = colors.bg, fg = colors.white}
   },

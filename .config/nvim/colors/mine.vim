@@ -38,7 +38,7 @@ hi Boolean      guifg=#44FF99 guibg=NONE    gui=italic
 hi Identifier   guifg=#FFFFFF guibg=NONE    gui=NONE
 hi Function     guifg=#FF4499 guibg=NONE    gui=NONE
 
-hi Statement    guifg=#FF9944 guibg=NONE    gui=NONE
+hi Statement    guifg=#FF9944 guibg=NONE    gui=italic
 hi Label        guifg=#FF9944 guibg=NONE    gui=italic
 hi Operator     guifg=#AAAABB guibg=NONE    gui=NONE
 
