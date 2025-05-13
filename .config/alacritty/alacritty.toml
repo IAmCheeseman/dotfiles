@@ -3,15 +3,15 @@ dynamic_padding = true
 opacity = 1.0
 
 [font]
-normal      = {family="MartianMono Nerd Font Mono", style="Medium"}
-bold        = {family="MartianMono Nerd Font Mono", style="Bold"}
-italic      = {family="MartianMono Nerd Font Mono", style="Medium Italic"}
-bold_italic = {family="MartianMono Nerd Font Mono", style="Bold Italic"}
+normal      = {family="FiraCode Nerd Font", style="Medium"}
+bold        = {family="FiraCode Nerd Font", style="Bold"}
+italic      = {family="FiraCode Nerd Font", style="Medium Italic"}
+bold_italic = {family="FiraCode Nerd Font", style="Bold Italic"}
 
 offset.x = 0
 offset.y = 0
 
-size = 11
+size = 13
 
 [colors]
 draw_bold_text_with_bright_colors = true
