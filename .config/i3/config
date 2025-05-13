@@ -6,7 +6,7 @@ set $right l
 
 font pango:MartianMono Nerd Font Medium 9
 
-exec --no-startup-id xrandr --output HDMI-A-1 --primary --mode 1920x1080 --rate 240 --output DVI-D-0 --mode 1024x768 --rate 60 --right-of HDMI-A-1
+exec --no-startup-id xrandr --output HDMI-A-1 --primary --mode 1920x1080 --rate 240
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
