@@ -1,6 +1,6 @@
 [window]
 dynamic_padding = true
-opacity = 1.0
+opacity = 1
 
 [font]
 normal      = {family="JetBrainsMono Nerd Font", style="Medium"}
@@ -18,7 +18,7 @@ draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 foreground = "#FFFFFF"
-background = "#111111"
+background = "#1A191C"
 
 [colors.normal]
 black = "#333333"

@@ -14,6 +14,3 @@ cp -r ~/.config/i3 .config
 
 # polybar
 cp -r ~/.config/polybar .config/
-
-# Picom
-cp -r ~/.config/picom .config

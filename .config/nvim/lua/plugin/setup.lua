@@ -12,8 +12,6 @@ require("oil").setup {
 
 require("presence").setup {}
 
-vim.cmd.colorscheme("mine")
-
 local colors = {
   white = "#FFFFFF",
   gray = "#A0A0A0",
