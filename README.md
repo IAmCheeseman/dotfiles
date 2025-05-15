@@ -1,15 +1,17 @@
 # Dotfiles
-
-My dotfiles.
+My dotfiles. There are some things in here specific to me, like how it launches
+Discord and Thunderbird automatically. So if you want to steal these, you'll
+have to find all that stuff and remove it yourself.
 
 I use the JetBrainsMono Nerd Font everywhere. Find it [here](https://www.nerdfonts.com/font-downloads).
 
 ![image](https://github.com/user-attachments/assets/4d4d341e-82aa-474b-b070-b21fa8c33b66)
 
+## xborders
+This config requires [xborders](https://github.com/deter0/xborder).
 ## Neovim
 Install [Packer](https://github.com/wbthomason/packer.nvim).
 Then run `:PackerSync`.
-
 ## Rofi
 I didn't want to put Rofi here since it's just a minorly edited version of
 someone else's theme.

@@ -11,7 +11,9 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id redshift
+exec --no-startup-id picom
+exec --no-startup-id ~/xborders --border-radius 5 --border-red 255 --border-green 255 --border-blue 255 --border-width 3
+# exec --no-startup-id redshift
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 
 exec --no-startup-id discord
@@ -34,11 +36,11 @@ bindsym Print exec --no-startup-id flameshot gui
 for_window [class="love"] floating enable
 for_window [instance="Godot_Engine"] floating enable
 
-default_border pixel 5
-default_floating_border pixel 5
+default_border pixel 0
+default_floating_border pixel 0
 
 gaps outer 0
-gaps inner 2
+gaps inner 10
 
 floating_modifier $mod
 
@@ -126,9 +128,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #E0E0E0 #E0E0E0 #000000 #ffffff   #E0E0E0
-client.focused_inactive #222222 #222222 #CACACA #ffffff   #222222
-client.unfocused        #000000 #000000 #CACACA #ffffff   #000000
+client.focused          #E0E0E0 #E0E0E0 #000000 #E0E0E0   #E0E0E0
+client.focused_inactive #222222 #222222 #CACACA #222222   #222222
+client.unfocused        #000000 #000000 #CACACA #000000   #000000
 client.urgent           #ff0000 #ff0000 #000000 #900000   #ff0000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff

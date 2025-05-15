@@ -1,8 +1,0 @@
-[20:59:25 2024-05-19] FETCHING Version 2.36.11
-[20:59:25 2024-05-19] DOWNLOADING https://github.com/spicetify/spicetify-cli/releases/download/v2.36.11/spicetify-2.36.11-linux-amd64.tar.gz
-[20:59:25 2024-05-19] EXTRACTING /home/xswan/.spicetify/spicetify.tar.gz
-[20:59:25 2024-05-19] SETTING EXECUTABLE PERMISSIONS TO /home/xswan/.spicetify/spicetify
-[20:59:25 2024-05-19] REMOVING /home/xswan/.spicetify/spicetify.tar.gz
-[20:59:25 2024-05-19] APPENDING /home/xswan/.spicetify to PATH in /home/xswan/.zshrc
-[20:59:25 2024-05-19] spicetify v2.36.11 was installed successfully to /home/xswan/.spicetify
-[20:59:25 2024-05-19] Run 'spicetify --help' to get started
