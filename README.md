@@ -5,7 +5,7 @@ have to find all that stuff and remove it yourself.
 
 I use the JetBrainsMono Nerd Font everywhere. Find it [here](https://www.nerdfonts.com/font-downloads).
 
-![image](https://github.com/user-attachments/assets/4d4d341e-82aa-474b-b070-b21fa8c33b66)
+![image](https://github.com/user-attachments/assets/429fd2be-d76b-4d23-91eb-397da608ea9b)
 
 ## xborders
 This config requires [xborders](https://github.com/deter0/xborder).
