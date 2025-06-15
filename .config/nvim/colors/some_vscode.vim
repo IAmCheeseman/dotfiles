@@ -22,39 +22,39 @@ hi LineNr       guifg=#666666 guibg=NONE    gui=NONE
 hi LineNrAbove  guifg=#888888 guibg=NONE    gui=NONE
 hi LineNrBelow  guifg=#888888 guibg=NONE    gui=NONE
 hi MatchParen   guifg=#FFFFFF guibg=#FF0000 gui=bold
-hi Normal       guifg=#AAAAAA guibg=#1A191C gui=NONE
+hi Normal       guifg=#f8f8f0 guibg=#16171d gui=NONE
 hi Pmenu        guifg=#FFFFFF guibg=#333333 gui=NONE
 hi PmenuSel     guifg=#333333 guibg=#FFFFFF gui=bold,underdouble
-hi Search       guifg=#333333 guibg=#FFFF88 gui=bold
+hi Search       guifg=#333333 guibg=#FFFF88 gui=bold,italic
 hi Visual       guifg=NONE    guibg=#333333 gui=NONE
 
-hi Comment      guifg=#777777 guibg=NONE    gui=NONE
+hi Comment      guifg=#777777 guibg=NONE    gui=italic
 
-hi Constant     guifg=#44FF99 guibg=NONE    gui=NONE
-hi Number       guifg=#44FF99 guibg=NONE    gui=NONE
-hi String       guifg=#FFFF00 guibg=NONE    gui=NONE
-hi Boolean      guifg=#44FF99 guibg=NONE    gui=NONE
+hi Constant     guifg=#81f900 guibg=NONE    gui=NONE
+hi Number       guifg=#e373ce guibg=NONE    gui=NONE
+hi String       guifg=#ffca2e guibg=NONE    gui=NONE
+hi Boolean      guifg=#e373ce guibg=NONE    gui=italic
 
 hi Identifier   guifg=#FFFFFF guibg=NONE    gui=NONE
-hi Function     guifg=#FF4499 guibg=NONE    gui=NONE
+hi Function     guifg=#81f900 guibg=NONE    gui=NONE
 
-hi Statement    guifg=#FF9944 guibg=NONE    gui=NONE
-hi Label        guifg=#FF9944 guibg=NONE    gui=NONE
-hi Operator     guifg=#AAAABB guibg=NONE    gui=NONE
+hi Statement    guifg=#ff3f3a guibg=NONE    gui=NONE
+hi Label        guifg=#ff3f3a guibg=NONE    gui=NONE
+hi Operator     guifg=#ff3f3a guibg=NONE    gui=NONE
 
-hi PreProc      guifg=#FF4499 guibg=NONE    gui=NONE
+hi PreProc      guifg=#81f900 guibg=NONE    gui=NONE
 
-hi Typedef      guifg=#997FFF guibg=NONE    gui=NONE
-hi Type         guifg=#997FFF guibg=NONE    gui=NONE
-hi StorageClass guifg=#4499FF guibg=NONE    gui=NONE
-hi Structure    guifg=#4499FF guibg=NONE    gui=bold
+hi Typedef      guifg=#00a0e4 guibg=NONE    gui=italic
+hi Type         guifg=#00a0e4 guibg=NONE    gui=italic
+hi StorageClass guifg=#ff3f3a guibg=NONE    gui=italic
+hi Structure    guifg=#19d1e5 guibg=NONE    gui=bold,italic
 
 hi Special      guifg=#CCCCDD guibg=NONE    gui=NONE
-hi SpecialChar  guifg=#ffffff guibg=NONE    gui=bold
+hi SpecialChar  guifg=#e373ce guibg=NONE    gui=NONE
 
 hi Error        guifg=#ff4444 guibg=NONE    gui=bold,undercurl
 
-hi Todo         guifg=#ffffff guibg=NONE    gui=bold,underline
+hi Todo         guifg=#ffffff guibg=NONE    gui=bold,italic,underline
 
 hi Added        guifg=#44FF44 guibg=NONE    gui=NONE
 hi Changed      guifg=#FFFF44 guibg=NONE    gui=NONE

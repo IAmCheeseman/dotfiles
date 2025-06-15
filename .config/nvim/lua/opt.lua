@@ -23,10 +23,3 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 vim.cmd.colorscheme("mine")
-
-vim.cmd [[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-]]
